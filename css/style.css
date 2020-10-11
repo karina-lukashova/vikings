@@ -116,3 +116,46 @@ a {
 .about__text p {
   margin-bottom: 25px;
 }
+
+.video {
+  background-image: url("../images/video-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  text-align: right;
+}
+
+.video__slogan {
+  padding-top: 23%;
+  margin-bottom: 40px;
+  font-style: italic;
+  font-size: 72px;
+  line-height: 84px;
+  color: #85CCDC;
+  
+}
+
+.video__slogan span {
+  display: block;
+  margin-right: 295px;
+}
+
+.video__link {
+  padding-left: 112px;
+  margin-right: 245px;
+  position: relative;
+}
+
+.video__link::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/yt-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
