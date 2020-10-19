@@ -67,12 +67,16 @@ a {
   background: linear-gradient(to top, #0E0E0E 0%, rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
 }
 
-.menu__list {
-  display: flex;
-  justify-content: center;
+.menu {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 58px;
   background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
 }
 
 .menu__list-item {
@@ -85,9 +89,13 @@ a {
   line-height: 42px;
 }
 
-.menu__list-link:hover {
+.menu__list-link:hover, .menu__list-link--active {
   color: #85CCDC;
   text-decoration: underline;
+}
+
+.menu__list-link--active {
+  cursor: default;
 }
 
 .logo {
@@ -166,6 +174,7 @@ a {
 }
 
 .seasons__list {
+  padding-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 100px 75px;
@@ -194,6 +203,10 @@ a {
   left: 0;
   top: -72px;
   z-index: -1;
+}
+
+.seasons__item:nth-of-type(n+10)::before {
+  content: counter(counter);
 }
 
 .seasons__item:hover::after {
@@ -269,4 +282,63 @@ a {
 .footer__copy {
   padding: 14px 0;
   text-align: center;
+}
+
+/* Season pages */
+
+.page-header {
+  background-image: url("../images/season-1-bg.jpg");
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  
+}
+
+.menu__container {
+  max-width: 1385px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-logo {
+  position: absolute;
+  padding-left: 5px;
+}
+
+.season-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1385px;
+  padding-top: 44px;
+  padding-right: 47px;
+  padding-bottom: 64px;
+  padding-left: 35px;
+  background-color: #0E0E0E;
+}
+
+.season-info__number {
+  margin-right: 51px;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.season-info__number span {
+  display: block;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.season-info__text p {
+  margin-bottom: 17px;
+}
+
+.season-info__text p:last-of-type {
+  margin-bottom: 0;
 }
